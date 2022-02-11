@@ -28,13 +28,14 @@ In general, a complex number has a real part and an imaginary part: $$z = x + iy
     \cos(2 π f t)
   \end{equation}
   \begin{equation}
-    \abs(\cos(2 π f t)
+    |\cos(2 π f t)|
   \end{equation}
   \begin{equation}
     \arctan(\cos(2 π f t))
   \end{equation}
   Some useful functions for this homework are "Multiply Const", "Transcendental", and "Abs". You can also change the number of inputs into the QT Gui Frequency Sink and the QT GUI Time Sink in order to display multiple graphs at the same time. For Homework 5, you should need 3 inputs in both the time sink and the frequency sink: one for each equation.
   To multiply by pi, use the "import" block. Import the math module the same way you would in Python, and you can then call math.pi.
+  Note that the "|" denotes the absolute value.
     
 
 
