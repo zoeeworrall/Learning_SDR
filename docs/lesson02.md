@@ -3,7 +3,22 @@
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/bV4oJTPlAeQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Rather than using providing a radio-frequency signal by propagating radio waves through the air to a receiver, we will start our exploration by feeding a "pure" electronic signal from a function generator operating at 100.001 MHz into an RTL-SDR and plotting its output in both time and frequency.
+
+## Notes on the Video
+
+<b> Dictionary of GNU Radio Companion Terms </b>
+<i>RTL-SDR Source</i>: Uses a signal received from a RTL-SDR USB source, which should be connected to some antenna to receive a signal.
+<i>QT GUI Time Sink</i>: Plots a sequence of complex numbers coming out of the source
+<i>QT GUI Frequency Sink</i>: Plots the frequency of complex numbers coming out of the source
+<i>Variable</i>: Creates a variable with a name and a value, similar to instantiating a variable in Python. (<i>In the video, we instantiated samp_rate with value 1e6. 1e6, in this case, is meant for a signal of 1 mega Hertz (1 mHz); since the RTL-SDR source uses the variable samp_rate, it will be checking for some signal at a frequency of 1 mHZ.</i>)
+
+<b> When Writing a GNU Program with the RTL-SDR Source </b>
+1. Title your program in the 'Options' box at the top left of the screen
+2. Set your variable samp_rate to the frequency you are expecting to receive (a value of 1 means 1 Hertz)
+3. Place your RTL-SDR Source, a QT Time Sink, and a QT Frequency Sink
+
+<b> About the Video </b> 
+Rather than providing a radio-frequency signal by propagating radio waves through the air to a receiver, we will start our exploration by feeding a "pure" electronic signal from a function generator operating at 100.001 MHz into an RTL-SDR and plotting its output in both time and frequency.
 
 We will tell the RTL-SDR that the function generator is transmitting at 100 MHz and we will find that the signal that the RTL-SDR output has the difference frequency between the function generator (100.001 MHz) and the SDR's local oscillator frequency (100 MHz), which is a sinusoidal wave at 1 kHz.
 
